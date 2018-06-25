@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  pageTitle = 'Angular Component Interaction';
+  imgUrl = 'https://picsum.photos/200';
+  count = 0;
+  name: string;
+
+  incrementCounter() {
+    this.count += 1;
+  }
 }
