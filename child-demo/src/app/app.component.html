@@ -7,5 +7,6 @@
 <app-child #child [loggedIn]="userLoggedIn"></app-child>
 <div>
   {{child.name}}
+  <button (click)="child.greetVishwas()">Greet</button>
 </div>
 

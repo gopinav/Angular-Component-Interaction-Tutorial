@@ -38,4 +38,8 @@ export class ChildComponent implements OnChanges {
     }
   }
 
+  greetVishwas() {
+    alert('Hey Vishwas!');
+  }
+
 }
