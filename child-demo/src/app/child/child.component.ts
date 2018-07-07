@@ -9,6 +9,7 @@ export class ChildComponent implements OnChanges {
 
   // private _loggedIn: boolean;
   message: string;
+  name = 'Vishwas';
 
   // get loggedIn(): boolean {
   //   return this._loggedIn;

@@ -4,5 +4,8 @@
   <button (click)="userLoggedIn=false">Logout</button>
   {{userLoggedIn}}
 </div>
-<app-child [loggedIn]="userLoggedIn"></app-child>
+<app-child #child [loggedIn]="userLoggedIn"></app-child>
+<div>
+  {{child.name}}
+</div>
 
