@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GreetService } from '../greet.service';
 
 @Component({
   selector: 'app-child',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-
-  constructor() { }
+  constructor(private _greetService: GreetService) { }
 
   ngOnInit() {
+    this._greetService.teacherGreeted$.subscribe(
+      message => {
+        if (message === 'Good Morning') {
+          alert('Good Morning Teacher!');
+        } else if (message === 'Well Done') {
+          alert('Thank you Teacher!');
+        }
+      }
+    );
   }
 
 }
